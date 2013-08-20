@@ -1,0 +1,36 @@
+{
+	"author"          : {
+		"name"        : "constantology",
+		"email"       : "christos@muigui.com",
+		"url"         : "http://muigui.com"
+	},
+	"description"     : "useful date parsing and formatting library",
+    "dependencies"    : {
+		"useful-type" : "*",
+		"useful-util" : "*"
+    },
+	"devDependencies" : {
+		"chai"                 : "*",
+		"grunt"                : "*",
+		"grunt-contrib-concat" : "*",
+		"mocha"                : "*"
+	},
+	"engines"         : {
+		"node"        : ">= 0.8.x"
+	},
+	"keywords"        : ["date"],
+	"licenses"        : [ {
+		"type"        : "MIT",
+	     "url"        : "https://raw.github.com/muigui/useful-date/master/LICENSE"
+	} ],
+	"main"            : "./index.js",
+	"name"            : "useful-date",
+	"repository"      : {
+		"type"        : "git",
+		"url"         : "git@github.com:muigui/useful-date.git"
+	},
+	"scripts"         : {
+		"test"        : "mocha -c --ignore-leaks -R spec -u tdd ./test/runner.js"
+	},
+	"version"         : "0.0.1"
+}

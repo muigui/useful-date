@@ -1,0 +1,21 @@
+{
+	"dependencies" : {
+		"muigui/useful-type" : "*",
+		"muigui/useful-util" : "*"
+	},
+	"description"  : "useful date parsing and formatting library",
+	"development"  : {
+		"chaijs/chai"       : "*",
+		"visionmedia/mocha" : "*"
+	},
+	"keywords"     : ["date"],
+	"license"      : "MIT",
+	"main"         : "index.js",
+	"name"         : "useful-date",
+	"repo"         : "muigui/useful-date",
+	"scripts"      : [
+		"index.js",
+		"locale/en-GB.js", "locale/en-US.js", "locale/GR.js"
+	],
+	"version"      : "0.0.1"
+}
