@@ -6,14 +6,14 @@
 	},
 	"description"     : "useful date parsing and formatting library",
     "dependencies"    : {
-		"useful-type" : "*",
-		"useful-util" : "*"
+		"useful-type" : "latest",
+		"useful-util" : "latest"
     },
 	"devDependencies" : {
-		"chai"                 : "*",
-		"grunt"                : "*",
-		"grunt-contrib-concat" : "*",
-		"mocha"                : "*"
+		"chai"                 : "latest",
+		"grunt"                : "latest",
+		"grunt-contrib-concat" : "latest",
+		"mocha"                : "latest"
 	},
 	"engines"         : {
 		"node"        : ">= 0.8.x"
