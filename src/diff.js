@@ -38,7 +38,7 @@
 // this ensures a diff's keys are always in descending order of
 // number of milliseconds per unit of time, i.e. year, ..., millisecond
 	def( 'diffKeys', function diff_keys( diff ) {
-		diff = util.copy( diff );
+		diff = copy( diff );
 
 		util.remove( diff, 'tense', 'value' );
 

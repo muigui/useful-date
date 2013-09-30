@@ -27,7 +27,7 @@
 					_k  = pluck( _p.combo, 'k' );
 					_fn = associate( pluck( _p.combo, 'fn' ), _k );
 					keys.push.apply( keys, _k );
-					util.copy( parsers, _fn, true );
+					copy( parsers, _fn, true );
 				}
 				if ( _p.re ) re.push( p1, _p.re, p3 );
 			} );

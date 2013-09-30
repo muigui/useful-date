@@ -6,8 +6,10 @@
 	},
 	"description"     : "useful date parsing and formatting library",
     "dependencies"    : {
-		"useful-type" : "latest",
-		"useful-util" : "latest"
+		"useful-copy"  : "latest",
+		"useful-type"  : "latest",
+		"useful-util"  : "latest",
+		"useful-value" : "latest"
     },
 	"devDependencies" : {
 		"chai"                 : "latest",
@@ -15,6 +17,9 @@
 		"grunt-contrib-concat" : "latest",
 		"grunt-contrib-uglify" : "latest",
 		"grunt-contrib-watch"  : "latest",
+		"grunt-lib-phantomjs"  : "latest",
+		"grunt-mocha"          : "latest",
+		"grunt-shell"          : "latest",
 		"mocha"                : "latest"
 	},
 	"engines"         : {

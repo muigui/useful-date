@@ -1,4 +1,6 @@
-	var type         = require( 'useful-type' ),
+	var copy         = require( 'useful-copy' ),
+		type         = require( 'useful-type' ),
+		value        = require( 'useful-value' ),
 		util         = require( 'useful-util' ),
 
 		UNDEF,
@@ -104,7 +106,7 @@
 
 	function pluck( arr, key ) {
 		return arr.reduce( function( res, val ) {
-			res.push( util.value( val, key ) );
+			res.push( value( val, key ) );
 
 			return res;
 		}, [] );
@@ -143,7 +145,7 @@
 					_k  = pluck( _p.combo, 'k' );
 					_fn = associate( pluck( _p.combo, 'fn' ), _k );
 					keys.push.apply( keys, _k );
-					util.copy( parsers, _fn, true );
+					copy( parsers, _fn, true );
 				}
 				if ( _p.re ) re.push( p1, _p.re, p3 );
 			} );
@@ -267,7 +269,7 @@
 // this ensures a diff's keys are always in descending order of
 // number of milliseconds per unit of time, i.e. year, ..., millisecond
 	def( 'diffKeys', function diff_keys( diff ) {
-		diff = util.copy( diff );
+		diff = copy( diff );
 
 		util.remove( diff, 'tense', 'value' );
 
@@ -798,7 +800,7 @@
 	}
 ;
 	function localize_formats( L ) {
-		var F = util.copy( {
+		var F = copy( {
 			ISO_8601 : 'Y-m-d<T>H:i:s.u<Z>', ISO_8601_SHORT : 'Y-m-d',
 			RFC_850  : 'l, d-M-y H:i:s T',   RFC_2822       : 'D, d M Y H:i:s O',
 			sortable : 'Y-m-d H:i:sO'

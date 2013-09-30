@@ -13,11 +13,39 @@ module.exports = function( grunt ) {
 				dest  : './index.js'
 			}
 		},
+		mocha         : {
+			all       : {
+				options : {
+					mocha    : {
+						ignoreLeaks : true,
+						ui          : 'tdd'
+					},
+					reporter : 'Spec'
+				},
+				src     : ['test/index.html']
+			}
+		},
+		shell         : {
+			'test'    : {
+                command: 'npm test',
+                options: {
+                    stdout: true,
+                    stderr: true
+                }
+            }
+		},
 		uglify        : {
-			my_target : {
+			build     : {
 				files : {
 					'./build/build.min.js' : [
 						'./build/build.js'
+					]
+				}
+			},
+			index     : {
+				files : {
+					'./index.min.js' : [
+						'./index.js'
 					]
 				}
 			}
@@ -31,6 +59,8 @@ module.exports = function( grunt ) {
   	grunt.loadNpmTasks( 'grunt-contrib-concat' );
   	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
   	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+  	grunt.loadNpmTasks( 'grunt-mocha' );
+  	grunt.loadNpmTasks( 'grunt-shell' );
 
 	grunt.registerTask( 'component:build', 'run component.io build script', function() {
 		console.log( 'component:build start.' );
@@ -47,5 +77,5 @@ module.exports = function( grunt ) {
 		} );
   	} );
 
-  	grunt.registerTask( 'default', ['concat', 'component:build', 'uglify'] );
+  	grunt.registerTask( 'default', ['concat', 'component:build', 'uglify', 'mocha'] );
 };

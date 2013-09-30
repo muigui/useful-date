@@ -1,4 +1,6 @@
-	var type         = require( 'useful-type' ),
+	var copy         = require( 'useful-copy' ),
+		type         = require( 'useful-type' ),
+		value        = require( 'useful-value' ),
 		util         = require( 'useful-util' ),
 
 		UNDEF,

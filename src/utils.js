@@ -44,7 +44,7 @@
 
 	function pluck( arr, key ) {
 		return arr.reduce( function( res, val ) {
-			res.push( util.value( val, key ) );
+			res.push( value( val, key ) );
 
 			return res;
 		}, [] );
