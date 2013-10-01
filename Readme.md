@@ -20,6 +20,27 @@
 
 ### Static methods
 
+#### localize( locale:String ):Date
+sets the underlying `locale`.
+
+##### Example:
+
+```javascript
+
+	require( 'useful-date' );
+	require( 'useful-date/locale/en-GB.js' );
+	require( 'useful-date/locale/en-US.js' );
+
+    Date.localize( 'en-US' );
+
+    Date.formats.short_date // returns => 'm/d/Y'
+
+    Date.localize( 'en-GB' );
+
+    Date.formats.short_date // returns => 'd/m/Y'
+
+```
+
 #### isLeapYear( year:String ):Boolean
 Returns true if the passed **4 digit** year is a leap year.
 
@@ -156,7 +177,7 @@ The Object will contain any or all of the following properties:
 		<tr><td width="48"><code>hours</code></td><td width="48">Number</td><td>The hours of years the Date instance is ahead or behind the passed Date.</td></tr>
 		<tr><td width="48"><code>minutes</code></td><td width="48">Number</td><td>The minutes of years the Date instance is ahead or behind the passed Date.</td></tr>
 		<tr><td width="48"><code>seconds</code></td><td width="48">Number</td><td>The seconds of years the Date instance is ahead or behind the passed Date.</td></tr>
-		<tr><td width="48"><code>milliseconds</code></td><td width="48">Number</td><td>The milliseconds of years the Date instance is ahead or behind the passed Date.</td></tr>
+		<tr><td width="48"><code>milliseconds</code></td><td width="48">Number</td><td>The number of milliseconds the Date instance is ahead or behind the passed Date or now.</td></tr>
 	</tbody>
 </table>
 
