@@ -1,7 +1,7 @@
 	var copy         = require( 'useful-copy' ),
+		iter         = require( 'useful-iter' ),
 		type         = require( 'useful-type' ),
 		value        = require( 'useful-value' ),
-		util         = require( 'useful-util' ),
 
 		UNDEF,
 		DATE_PROTO   = Date.prototype,
@@ -271,7 +271,7 @@
 	def( 'diffKeys', function diff_keys( diff ) {
 		diff = copy( diff );
 
-		util.remove( diff, 'tense', 'value' );
+		iter.remove( diff, 'tense', 'value' );
 
 // while this may seem like overkill, only having to run `indexOf` once for each sort item means that
 // the overall performance is dramatically improved
@@ -333,7 +333,7 @@
 				case 'object' : incl_remaining = false; break;
 				case 'string' : props          = props.split( ' ' ); // allow fall-through
 				case 'array'  : props          = props.reduce( diff_excl, excl );
-								incl_remaining = !!util.len( excl );
+								incl_remaining = !!iter.len( excl );
 			}
 		}
 
@@ -843,7 +843,7 @@
 										return o += ( o < 30 ? 2000 : 1900 );
 									},                                          re : re_d2 },
 		// time
-			a : { k  : AMPM,        fn : util.k,                                re : re_ampm },
+			a : { k  : AMPM,        fn : iter.k,                                re : re_ampm },
 			A : { k  : AMPM,        fn : _lc,                                   re : _uc( re_ampm ) },
 			g : { k  : HOUR,        fn : _24hrTime,                             re : re_d1_2 },
 			G : { k  : HOUR,        fn : Number,                                re : re_d1_2 },

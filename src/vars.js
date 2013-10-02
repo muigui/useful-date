@@ -1,7 +1,7 @@
 	var copy         = require( 'useful-copy' ),
+		iter         = require( 'useful-iter' ),
 		type         = require( 'useful-type' ),
 		value        = require( 'useful-value' ),
-		util         = require( 'useful-util' ),
 
 		UNDEF,
 		DATE_PROTO   = Date.prototype,

@@ -26,7 +26,7 @@
 										return o += ( o < 30 ? 2000 : 1900 );
 									},                                          re : re_d2 },
 		// time
-			a : { k  : AMPM,        fn : util.k,                                re : re_ampm },
+			a : { k  : AMPM,        fn : iter.k,                                re : re_ampm },
 			A : { k  : AMPM,        fn : _lc,                                   re : _uc( re_ampm ) },
 			g : { k  : HOUR,        fn : _24hrTime,                             re : re_d1_2 },
 			G : { k  : HOUR,        fn : Number,                                re : re_d1_2 },

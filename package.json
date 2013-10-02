@@ -7,8 +7,8 @@
 	"description"     : "useful date parsing and formatting library",
     "dependencies"    : {
 		"useful-copy"  : "latest",
+		"useful-iter"  : "latest",
 		"useful-type"  : "latest",
-		"useful-util"  : "latest",
 		"useful-value" : "latest"
     },
 	"devDependencies" : {
@@ -39,5 +39,5 @@
 	"scripts"         : {
 		"test"        : "mocha -c --ignore-leaks -R spec -u tdd ./test/runner.js"
 	},
-	"version"         : "0.0.4"
+	"version"         : "0.0.5"
 }

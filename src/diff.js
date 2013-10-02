@@ -40,7 +40,7 @@
 	def( 'diffKeys', function diff_keys( diff ) {
 		diff = copy( diff );
 
-		util.remove( diff, 'tense', 'value' );
+		iter.remove( diff, 'tense', 'value' );
 
 // while this may seem like overkill, only having to run `indexOf` once for each sort item means that
 // the overall performance is dramatically improved
@@ -102,7 +102,7 @@
 				case 'object' : incl_remaining = false; break;
 				case 'string' : props          = props.split( ' ' ); // allow fall-through
 				case 'array'  : props          = props.reduce( diff_excl, excl );
-								incl_remaining = !!util.len( excl );
+								incl_remaining = !!iter.len( excl );
 			}
 		}
 

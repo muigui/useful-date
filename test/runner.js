@@ -1,6 +1,4 @@
 chai     = require( 'chai' );
-type     = require( 'useful-type' );
-util     = require( 'useful-util' );
 expect   = chai.expect;
 
 require( '../index' );
