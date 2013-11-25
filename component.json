@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "muigui/useful-copy": "latest",
-    "muigui/useful-iter": "latest",
-    "muigui/useful-type": "latest",
-    "muigui/useful-value": "latest"
+    "muigui/useful-copy": "*",
+    "muigui/useful-iter": "*",
+    "muigui/useful-type": "*",
+    "muigui/useful-value": "*"
   },
   "description": "useful date parsing and formatting library",
   "development": {
@@ -23,6 +23,6 @@
     "locale/en-US.js",
     "locale/GR.js"
   ],
-  "version": "0.0.5",
+  "version": "0.0.6",
   "remotes": []
 }

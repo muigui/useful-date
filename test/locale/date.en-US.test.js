@@ -86,6 +86,8 @@ suite( 'muigui/useful-date (en-US)', function() {
 		expect( Date.coerce( '2010-166',  'Y-z'   ) ).to.eql( new Date( 2010,  5, 15 ) );
 		expect( Date.coerce( '2010-365',  'Y-z'   ) ).to.eql( new Date( 2010, 11, 31 ) );
 		expect( Date.coerce( '2010-24',   'Y-W'   ) ).to.eql( new Date( 2010,  5, 13 ) );
+		expect( Date.coerce( '2010-01',   'Y-W'   ) ).to.eql( new Date( 2010,  0, 3 ) );
+		expect( Date.coerce( '2010-1',    'Y-W'   ) ).to.eql( new Date( 2010,  0, 3 ) );
 
 		expect( Date.coerce( '2010-24-1', 'Y-W-N' ) ).to.eql( new Date( 2010,  5, 14 ) );
 		expect( Date.coerce( '2010-24-2', 'Y-W-N' ) ).to.eql( new Date( 2010,  5, 15 ) );

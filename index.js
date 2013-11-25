@@ -827,7 +827,7 @@
 			w : { k  : DAYWEEK,     fn : Number,                                re : '([0-6])' },
 			z : { k  : DAYYEAR,     fn : Number,                                re : '([0-9]{1,3})' },
 		// week
-			W : { k  : WEEK,        fn : Number,                                re : re_d2 },
+			W : { k  : WEEK,        fn : Number,                                re : re_d1_2 },
 		// month
 			F : { k  : MONTH,       fn : _indexOf.bind( null, L.months ),       re : '(' + L.months.join( '|' ) + ')' },
 			m : { k  : MONTH,       fn : _zeroIndexedInt,                       re : re_d2 },
